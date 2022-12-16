@@ -1,0 +1,1 @@
+export { Switch, StyledSwitchRoot } from './Switch';
