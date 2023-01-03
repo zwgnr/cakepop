@@ -3,18 +3,14 @@ import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
 //import { rainbowSprinkles, RealrainbowSprinkles } from '../../contract';
 
-import { defaultTheme } from '../../themes/defaultTheme';
-
+import { defaultTheme } from '../../themes/defaultTheme.css';
 import { excludedParams } from '../../utils/excludedParams';
-
-import { pop } from '../../utils';
-
-import { style as css, style } from '@macaron-css/core';
-import { SprinklesButton } from './Button';
-
-import { Button } from '../../index';
+//import { SprinklesButton } from './Button';
+import { overRideStyles } from './overRide.css';
+import { Button } from './Button';
 import { Spacer } from '../Spacer/Spacer';
 import { clsx } from 'clsx';
+
 export default {
   title: 'Button',
   component: Button,
@@ -23,22 +19,8 @@ export default {
 const buttonTemplate: StoryFn<typeof Button> = (args) => {
   return (
     <div style={{ display: 'flex' }} className={defaultTheme}>
-      <Button {...args}>Button</Button>
-      <Spacer />
-      <SprinklesButton
-        sx={{
-          padding: '$32',
-          color: { hover: '$amber800' },
-        }}
-      />
-      <Button {...args}>test</Button>
-      <Spacer />
-      <Button
-        {...args}
-        //overrides
-      >
-        test
-        <div className={style({ backgroundColor: 'red' })}></div>
+      <Button overrides={overRideStyles} variant='accent'>
+        button
       </Button>
     </div>
   );

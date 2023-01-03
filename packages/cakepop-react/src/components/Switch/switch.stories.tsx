@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import { style } from '@macaron-css/core';
 //import { style } from '../../index';
-import { pop } from '../../index';
-import { defaultTheme } from '../../themes/defaultTheme';
+import { defaultTheme } from '../../themes/defaultTheme.css';
 
 import { Button } from '../Button';
 import { Flex } from '../Flex/Flex';
@@ -20,7 +18,6 @@ export const switchComponent: StoryFn<typeof Switch> = (args) => {
   return (
     <div className={defaultTheme}>
       <Switch
-        css={style({ backgroundColor: 'red !important' })}
         variant='accent'
         onCheckedChange={setSelected}
         {...args}

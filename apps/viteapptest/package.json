@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@cakepop/react": "*",
+    "@macaron-css/react": "^1.0.1",
+    "@master/css": "^1.37.8",
     "braid-design-system": "^31.22.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

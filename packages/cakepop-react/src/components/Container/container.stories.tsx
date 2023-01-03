@@ -1,11 +1,10 @@
 import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
-import { defaultTheme } from '../../themes/defaultTheme';
-import { pop } from '../../index';
+import { defaultTheme } from '../../themes/defaultTheme.css';
 import { Button } from '../Button';
 
 import { Flex } from '../Flex/Flex';
-import { Container } from '../../index';
+import { Container } from './Container';
 import { pallete } from '../../contract/tokens';
 
 export default {

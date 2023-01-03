@@ -1,5 +1,5 @@
 const { mergeConfig } = require('vite');
-import { macaronVitePlugin } from '@macaron-css/vite';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 module.exports = {
   stories: [
     //'../../../packages/**/src/**/**/*.stories.mdx',
@@ -21,7 +21,7 @@ module.exports = {
   },
   async viteFinal(config) {
     return mergeConfig(config, {
-      plugins: [macaronVitePlugin()],
+      plugins: [vanillaExtractPlugin()],
     });
   },
 };

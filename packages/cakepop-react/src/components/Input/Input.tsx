@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { ComponentPropsWithRef, useState } from 'react';
-import { sprinkles, SprinklesTypes } from '../../contract/sprinkles.css';
 import {
   boxRecipe,
   inputRecipe,
@@ -10,7 +9,7 @@ import {
   endHelperStyles,
   descriptionStyles,
   errorStyles,
-} from './inputRecipe';
+} from './inputRecipe.css';
 
 import {
   useTextField,

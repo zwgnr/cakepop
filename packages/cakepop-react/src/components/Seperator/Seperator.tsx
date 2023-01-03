@@ -2,10 +2,8 @@ import * as React from 'react'
 
 import * as Separator from '@radix-ui/react-separator';
 import { SeparatorProps } from '@radix-ui/react-separator';
-import { sprinkles } from '../../contract/sprinkles.css';
-
 import { useSwitch, VisuallyHidden, useFocusRing, AriaSwitchProps } from 'react-aria';
-import { seperatorRecipe } from './seperatorRecipe';
+import { seperatorRecipe } from './seperatorRecipe.css';
 
 export interface Props extends SeparatorProps {
   variant?: 'neutral' | 'primary' | 'accent' | 'success' | 'info' | 'warning' | 'danger';

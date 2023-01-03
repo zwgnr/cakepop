@@ -1,34 +1,32 @@
 {
-  "name": "cakepop-docs",
-  "version": "0.1.0",
-  "private": true,
+  "name": "cakepop-ui-docs",
+  "version": "0.0.1",
+  "description": "CakepopUI Docs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
+    "start": "next start"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+  },
+  "author": "Zach Wagner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shuding/nextra-docs-template/issues"
+  },
+  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
   "dependencies": {
     "@cakepop/react": "*",
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.9",
-    "@vanilla-extract/css": "^1.9.2",
-    "@vanilla-extract/next-plugin": "^2.1.1",
-    "@vanilla-extract/sprinkles": "^1.5.1",
-    "eslint": "8.28.0",
-    "eslint-config-cakepop": "*",
-    "eslint-config-next": "13.0.5",
-    "next": "13.0.6",
-    "next-transpile-modules": "^10.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "4.9.3"
+    "next": "^13.0.6",
+    "nextra": "2.0.1",
+    "nextra-theme-docs": "2.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@vanilla-extract/css": "^1.9.2",
-    "@vanilla-extract/next-plugin": "^2.1.1",
-    "next-compose-plugins": "^2.2.1"
+    "@types/node": "18.11.10",
+    "typescript": "^4.9.3"
   }
 }

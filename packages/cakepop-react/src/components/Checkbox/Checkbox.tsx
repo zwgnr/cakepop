@@ -4,38 +4,50 @@ import React, { ComponentPropsWithRef, forwardRef, ReactNode, useRef } from 'rea
 import { useSwitch, VisuallyHidden, useFocusRing, AriaCheckboxProps } from 'react-aria';
 import { mergeProps, useObjectRef } from '@react-aria/utils';
 import { useToggleState } from 'react-stately';
-import { checkboxRecipe } from './checkboxRecipe';
+import {
+  cbRootRecipe,
+  cbIndicatorRecipe,
+  checkboxRootVariants,
+  checkboxIndicatorVariants,
+} from './checkboxRecipe.css';
 import { flex } from '../Flex/flex.stories';
 import { Spacer } from '../Spacer/Spacer';
 import { useFocusableRef } from '../../utils/useDomRefs';
 import { FocusableRef } from '@react-types/shared';
+import * as RadixCheckbox from '@radix-ui/react-checkbox';
+import { CheckboxIndicatorProps, CheckboxProps } from '@radix-ui/react-checkbox';
 
+import { CheckIcon } from '@radix-ui/react-icons';
 export type Ref = HTMLLabelElement & HTMLInputElement;
 //export type CPWR = ComponentPropsWithRef<'input'>;
+import { Flex } from '../Flex/Flex';
 
 export interface Props {
-  variant?: 'neutral' | 'primary' | 'accent' | 'success' | 'info' | 'warning' | 'danger';
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  purpose?: 'orange';
-  square?: boolean;
-  isSelected?: boolean;
-  onChange: (isSelected: boolean) => void;
+  sx?: any;
 }
 
-export type CheckboxProps = Props & AriaCheckboxProps;
+export type CBProps = Props &
+  checkboxRootVariants &
+  checkboxIndicatorVariants &
+  CheckboxIndicatorProps &
+  CheckboxProps;
 
-export const Checkbox = forwardRef<Ref, CheckboxProps>((props, forwardedRef) => {
-  let { variant, square, size, children } = props;
-  let state = useToggleState(props);
-  let { isSelected } = state;
-  let inputRef = useRef<HTMLInputElement>(null);
+export const Checkbox = forwardRef<Ref, CBProps>((props, forwardedRef) => {
+  let { children, variant, size } = props;
   let ref = useObjectRef(forwardedRef);
-  let { inputProps } = useSwitch(props, state, ref);
-  let { isFocusVisible, focusProps } = useFocusRing();
   return (
-    <label ref={ref} style={{ display: 'block' }}>
-      <input className={checkboxRecipe()} {...inputProps} ref={inputRef} />
-      {children}
-    </label>
+    <form>
+      {' '}
+      <Flex style={{ alignItems: 'center' }}>
+        <RadixCheckbox.Root className={cbRootRecipe({ size })} id='c1'>
+          <RadixCheckbox.Indicator className={cbIndicatorRecipe({ variant })}>
+            <CheckIcon />
+          </RadixCheckbox.Indicator>
+        </RadixCheckbox.Root>
+        <label style={{ paddingLeft: 15 }} htmlFor='c1'>
+          {children}
+        </label>
+      </Flex>
+    </form>
   );
 });

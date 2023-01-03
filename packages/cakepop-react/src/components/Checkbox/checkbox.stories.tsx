@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import { StoryFn, Meta } from '@storybook/react';
 
-import { defaultTheme } from '../../themes/defaultTheme';
+import { defaultTheme } from '../../themes/defaultTheme.css';
 
 import { Button } from '../Button/';
 import { Flex } from '../Flex/Flex';
 import { Checkbox } from './Checkbox';
 import { Container } from '../Container/Container';
-
-import { ZagCheckbox } from './zagCheckbox';
 
 export default {
   title: 'Checkbox',
@@ -20,8 +18,11 @@ export const checkbox: StoryFn<typeof Checkbox> = (args) => {
   //const handleChecked = {isChecked ? 'checked' : 'unchecked'}
   return (
     <div className={defaultTheme}>
-      <ZagCheckbox > Input is</ZagCheckbox>
-      <Checkbox {...args}>Test</Checkbox>
+      <Checkbox variant='primary' size='xs'>xs</Checkbox>
+      <Checkbox size='sm'>sm</Checkbox>
+      <Checkbox size='md'>md</Checkbox>
+      <Checkbox size='lg'>lg</Checkbox>
+      <Checkbox size='xl'>xl</Checkbox>
     </div>
   );
 };

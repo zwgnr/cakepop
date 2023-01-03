@@ -1,5 +1,5 @@
 import React, { ComponentPropsWithoutRef, ElementType } from 'react';
-import { RealrainbowSprinkles, rbSprinklesTypes } from '../../contract/realRainbow.css';
+import { RealrainbowSprinkles, rbSprinklesTypes } from '../../contract/pop.css';
 
 type PolymorphicComponentProps<TType extends ElementType, Props> = {
   as?: TType;

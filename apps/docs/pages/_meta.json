@@ -1,0 +1,24 @@
+{
+  "-- Info --": {
+    "type": "separator",
+    "title": "Get Started"
+  },
+  "index": "Intro",
+  "another": "Installation",
+  "----": {
+    "type": "separator"
+
+  },
+  "components": "Components",
+  "theme": "Theme",
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/shuding_",
+    "newWindow": true
+  }
+}

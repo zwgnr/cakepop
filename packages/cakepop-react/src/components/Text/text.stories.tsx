@@ -1,7 +1,7 @@
 import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
-import { defaultTheme } from '../../themes/defaultTheme';
+import { defaultTheme } from '../../themes/defaultTheme.css';
 import { Text } from './index';
 import { excludedParams } from '../../utils/excludedParams';
 

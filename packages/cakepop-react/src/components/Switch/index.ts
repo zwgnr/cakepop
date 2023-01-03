@@ -1,1 +1,1 @@
-export { Switch, StyledSwitchRoot } from './Switch';
+export { Switch } from './Switch';

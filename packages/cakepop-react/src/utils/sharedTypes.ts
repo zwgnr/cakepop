@@ -2,6 +2,11 @@ import React, { ComponentPropsWithRef, ElementType } from 'react';
 
 import { FocusableRef } from '@react-types/shared';
 
+////export type PolymorphicComponentProps<TType extends ElementType, Props> = {
+//  as?: TType;
+//} & Omit<ComponentPropsWithRef<TType>, keyof Props> &
+//  Props;
+
 // Source: https://www.benmvp.com/blog/forwarding-refs-polymorphic-react-component-typescript/
 
 // Source: https://github.com/emotion-js/emotion/blob/master/packages/styled-base/types/helper.d.ts

@@ -1,6 +1,6 @@
 import { StoryFn, Meta } from '@storybook/react';
 
-import { defaultTheme } from '../../themes/defaultTheme';
+import { defaultTheme } from '../../themes/defaultTheme.css';
 
 import { Button } from '../Button';
 import { Container } from '../Container/Container';
@@ -14,21 +14,7 @@ export default {
 export const spacer: StoryFn<typeof Spacer> = (args) => {
   return (
     <div className={defaultTheme}>
-      <Container>
-        <p></p>
-      </Container>
       <Spacer />
-      <Container>
-        <p></p>
-      </Container>
-      <Spacer />
-      <Container mode='responsive' maxSize='lg'>
-        <Container mode='responsive'>
- 
-        </Container>
-        <Spacer />
-
-      </Container>
     </div>
   );
 };

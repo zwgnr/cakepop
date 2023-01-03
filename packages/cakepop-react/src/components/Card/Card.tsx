@@ -1,7 +1,3 @@
-import { CardHeader } from './CardHeader';
-import { CardImage } from './CardImage';
-import { CardFooter } from './CardFooter';
-import { CardBody } from './CardBody';
 import React, {
   forwardRef,
   ComponentPropsWithRef,
@@ -11,7 +7,7 @@ import React, {
   ReactNode,
 } from 'react';
 import { useButton, useHover, useFocusRing, AriaButtonProps } from 'react-aria';
-import { cardRecipe } from './cardRecipe';
+import { cardRecipe } from './cardRecipe.css';
 import { mergeProps, useObjectRef } from '@react-aria/utils';
 //import { sprinkles, SprinklesTypes } from '../../contract/sprinkles.css';
 //import { RealrainbowSprinkles, rbSprinklesTypes } from '../../contract';
@@ -25,14 +21,14 @@ export interface CardProps extends ComponentPropsWithRef<'div'> {
   elevation?: 'low' | 'med' | 'high';
   buttonCard?: boolean;
   hoverable?: boolean;
-  fuckyou?: string
+  fuckyou?: string;
 }
 
 export type P = CardProps & AriaButtonProps;
 
-const Card = forwardRef<Ref, P>((props, forwardedRef) => {
+export const Card = forwardRef<Ref, P>((props, forwardedRef) => {
   let { children, buttonCard, hoverable, variant, rounded, elevation, fuckyou } = props;
-//
+  //
   let ref = useObjectRef(forwardedRef);
   let { isFocusVisible, focusProps } = useFocusRing();
   let { hoverProps, isHovered } = useHover({});
@@ -63,15 +59,3 @@ const Card = forwardRef<Ref, P>((props, forwardedRef) => {
     </div>
   );
 });
-
-type CardComponent<T, P = {}> = React.ForwardRefExoticComponent<
-  PropsWithoutRef<P> & RefAttributes<T>
-> & {
-  Header: typeof CardHeader;
-  Image: typeof CardImage;
-  Body: typeof CardBody;
-  Footer: typeof CardFooter;
-};
-
-export default Card as CardComponent<HTMLDivElement, P>;
-Card.displayName = 'Card';

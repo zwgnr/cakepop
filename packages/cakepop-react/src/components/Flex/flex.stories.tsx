@@ -1,6 +1,6 @@
 import { StoryFn, Meta } from '@storybook/react';
 
-import { defaultTheme } from '../../themes/defaultTheme';
+import { defaultTheme } from '../../themes/defaultTheme.css';
 
 import { Flex } from '../Flex/Flex';
 

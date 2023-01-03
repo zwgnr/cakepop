@@ -1,7 +1,7 @@
 import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
-import { defaultTheme } from '../../themes/defaultTheme';
-import Card  from './index';
+import { defaultTheme } from '../../themes/defaultTheme.css';
+import { Card } from './index';
 import { Container } from '../Container/Container';
 
 export default {
@@ -12,11 +12,9 @@ export default {
 export const card: StoryFn<typeof Card> = (args) => {
   return (
     <div className={defaultTheme}>
-      <Container>
-        <Card {...args}>
-          <button></button>
-        </Card>
-      </Container>
+      <Card {...args}>
+        <button>button</button>
+      </Card>
     </div>
   );
 };
