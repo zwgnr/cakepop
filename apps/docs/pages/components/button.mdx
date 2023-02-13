@@ -4,33 +4,58 @@ import { defaultTheme, Button } from '@cakepop/react';
 
 # Button
 
-#### Colors
+#### Variant
 
-<Tabs items={['Preview', 'JS/TS{X}', 'VSCODE-Snippet']}>
+<Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
+      <Button variant='neutral'>Neutral</Button>
       <Button variant='primary'>Primary</Button>
       <Button variant='accent'>Accent</Button>
+      <Button variant='success'>Success</Button>
+      <Button variant='info'>Info</Button>
+      <Button variant='warning'>Warning</Button>
+      <Button variant='danger'>Danger</Button>
     </div>
   </Tab>
   <Tab>
     ```tsx //
     import { Button } from '@cakepop/react';
 
-    <Button variant='primary'>Primary</Button>
-    <Button variant='accent'>Accent</Button>
+     <Button variant='neutral'>Neutral</Button>
+     <Button variant='primary'>Primary</Button>
+     <Button variant='accent'>Accent</Button>
+     <Button variant='success'>Success</Button>
+     <Button variant='info'>Info</Button>
+     <Button variant='warning'>Warning</Button>
+     <Button variant='danger'>Danger</Button>
     ```
 
   </Tab>
-  <Tab>**Yarn** is a software packaging system.</Tab>
 </Tabs>
 
-<Tabs items={['Preview', 'JS/TS{X}', 'VSCODE-Snippet']}>
+#### Size
+
+<Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-      <Button variant='primary'>Button</Button>
+      <Button size='xs' variant='primary'>XS</Button>
+      <Button size='sm' variant='primary'>SM</Button>
+      <Button size='md' variant='primary'>MD</Button>
+      <Button size='lg' variant='primary'>LG</Button>
+      <Button size='xl' variant='primary'>XL</Button>
     </div>
   </Tab>
-  <Tab>**npm** is a package manager for the JavaScript programming language.</Tab>
-  <Tab>**Yarn** is a software packaging system.</Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+
+      <Button size='xs' variant='primary'>XS</Button>
+      <Button size='sm' variant='primary'>SM</Button>
+      <Button size='md' variant='primary'>MD</Button>
+      <Button size='lg' variant='primary'>LG</Button>
+      <Button size='xl' variant='primary'>XL</Button>
+    ```
+
+  </Tab>
 </Tabs>

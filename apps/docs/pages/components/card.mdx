@@ -1,0 +1,99 @@
+import { Tab, Tabs } from 'nextra-theme-docs';
+import '@cakepop/react/styles';
+import { defaultTheme, Card } from '@cakepop/react';
+
+# Card
+
+#### Variant
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme} style={{display: "flex", gap:'12px'}}>
+      <Card variant='outline' sx={{height:'200px', width:'200px', display:'flex', place:'center'}}>Outline</Card>
+      <Card variant='shadow' elevation='med' sx={{height:'200px', width:'200px', display:'flex', place:'center'}}>Shadow</Card>
+      <Card variant='flat' sx={{height:'200px', width:'200px', display:'flex', place:'center', bg:'lightgray'}}>Flat</Card>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+
+<Card variant='outline' sx={{ height: '200px', width: '200px', display: 'flex', place: 'center' }}>
+  Outline
+</Card>
+
+<Card
+  variant='shadow'
+  elevation='med'
+  sx={{ height: '200px', width: '200px', display: 'flex', place: 'center' }}>
+  Shadow
+</Card>
+
+<Card
+  variant='flat'
+  sx={{ height: '200px', width: '200px', display: 'flex', place: 'center', bg: 'lightgray' }}>
+  Flat
+</Card>
+```
+
+  </Tab>
+</Tabs>
+
+#### Rounded
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+<Card rounded sx={{height:'200px', width:'200px', display:'flex', place:'center', bg:'lightgray'}}>Rounded</Card>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+<Card rounded sx={{height:'200px', width:'200px', display:'flex', place:'center', bg:'lightgray'}}>Rounded</Card>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Hoverable
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+<Card  hoverable sx={{height:'200px', width:'200px', display:'flex', place:'center', bg:'lightgray'}}>Hoverable</Card>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+<Card  hoverable sx={{height:'200px', width:'200px', display:'flex', place:'center', bg:'lightgray'}}>Hoverable</Card>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Elevation
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme} style={{display: "flex", gap:'12px'}}>
+       <Card variant='shadow' elevation='low' sx={{height:'200px', width:'200px', display:'flex', place:'center'}}>Low</Card>
+       <Card variant='shadow' elevation='med' sx={{height:'200px', width:'200px', display:'flex', place:'center'}}>Med</Card>
+       <Card variant='shadow' elevation='high' sx={{height:'200px', width:'200px', display:'flex', place:'center'}}>High</Card>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+<Card variant='shadow' elevation='low' sx={{height:'200px', width:'200px', display:'flex', place:'center'}}>Low</Card>
+       <Card variant='shadow' elevation='med' sx={{height:'200px', width:'200px', display:'flex', place:'center'}}>Med</Card>
+       <Card variant='shadow' elevation='high' sx={{height:'200px', width:'200px', display:'flex', place:'center'}}>High</Card>
+    ```
+
+  </Tab>
+</Tabs>
