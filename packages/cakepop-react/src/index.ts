@@ -3,9 +3,6 @@ export { pop } from './contract/pop.css';
 
 export { Button, Card } from './components';
 
-export { default as Nav } from './components/Nav(todo)';
-export * from './components/Nav(todo)';
-
 export { vars } from './contract/contract.css';
 export { pallete } from './contract/tokens';
 
