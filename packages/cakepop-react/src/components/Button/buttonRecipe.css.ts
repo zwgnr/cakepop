@@ -1,6 +1,5 @@
 import { vars } from '../../contract/contract.css';
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
-import { style, createThemeContract, fallbackVar } from '@vanilla-extract/css';
 import { space } from '../../contract/tokens';
 
 import {

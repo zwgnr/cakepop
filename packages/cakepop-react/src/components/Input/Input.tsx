@@ -19,9 +19,11 @@ import {
   AriaTextFieldProps,
 } from 'react-aria';
 import { mergeProps, useObjectRef } from '@react-aria/utils';
-
+import { pop, popTypes } from '../../contract/pop.css';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { CakepopUIProps, forwardRef } from '../../utils/themeTypes';
+import { clsx } from 'clsx';
+
 export type CPWR = ComponentPropsWithRef<'input'>;
 
 export interface Props {
@@ -32,12 +34,8 @@ export interface Props {
   endHelper?: string;
   children?: any;
   errorMessage?: string;
-  peck?: string;
+  sx?: popTypes;
 }
-
-//export type FUCK = Omit<ButtonVariants, 'as'>;
-
-//type VariantProps = Omit<ButtonVariants, 'isPressed' | 'as' | 'isHovered' | 'isFocusVisible'>;
 
 export type InputProps = Props &
   AriaTextFieldProps &
@@ -45,7 +43,19 @@ export type InputProps = Props &
   Props;
 
 export const Input = forwardRef<InputProps, 'input'>((props, forwardedRef) => {
-  let { label, fc, shape, disabled, size, startHelper, endHelper, errorMessage, ...rest } = props;
+  const {
+    sx = {},
+    label,
+    fc,
+    shape,
+    disabled,
+    size,
+    startHelper,
+    endHelper,
+    errorMessage,
+    ...rest
+  } = props;
+  let { className, style } = pop(sx!);
   let ref = useObjectRef(forwardedRef);
   let [hasFocus, setFocus] = useState(false);
   let { labelProps, inputProps, descriptionProps, errorMessageProps } = useTextField(
@@ -68,7 +78,7 @@ export const Input = forwardRef<InputProps, 'input'>((props, forwardedRef) => {
   return (
     <div className={boxRecipe()}>
       <label {...labelProps}>{label}</label>
-      <div className={containerRecipe({ fc, hasFocus, shape })}>
+      <div className={clsx(!!sx && className, containerRecipe({ fc, hasFocus, shape }))}>
         {startHelper && <span className={startHelperStyles}>{startHelper}</span>}
         {inputProps.type !== 'password' ? (
           <input className={inputRecipe()} {...inputProps} ref={ref} {...rest} />

@@ -1,8 +1,8 @@
-import React, { ReactNode, ComponentPropsWithRef, ElementType, forwardRef } from 'react';
+import React, { ReactNode, ElementType, forwardRef } from 'react';
 import { useFocusableRef } from '../../utils/useDomRefs';
 import { PolymorphicRef, PolymorphicComponentPropsWithRef } from '../../utils/sharedTypes';
-import { useButton, useHover, useFocusRing, AriaButtonProps } from 'react-aria';
-import { mergeProps, filterDOMProps } from '@react-aria/utils';
+import { useButton, useHover, useFocusRing } from 'react-aria';
+import { mergeProps } from '@react-aria/utils';
 import { pop, popTypes } from '../../contract/pop.css';
 import { clsx } from 'clsx';
 import { buttonRecipe, ButtonRecipeVariants } from './buttonRecipe.css';
@@ -55,7 +55,6 @@ export const Button: ButtonComponent = forwardRef(
       domRef
     );
     let { hoverProps, isHovered } = useHover({ isDisabled: disabled });
-    // let domProps = filterDOMProps(props);
     return (
       <Component
         {...props}
@@ -78,8 +77,7 @@ export const Button: ButtonComponent = forwardRef(
           overrides
         )}
         style={style}
-        {...mergeProps(buttonProps, focusProps, hoverProps)}
-      >
+        {...mergeProps(buttonProps, focusProps, hoverProps)}>
         {iconStart} {children} {iconEnd}
       </Component>
     );

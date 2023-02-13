@@ -1,7 +1,5 @@
 import { vars } from '../../contract/contract.css';
-import { style } from '@macaron-css/core';
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
-
 
 export const containerRecipe = recipe({
   base: {},

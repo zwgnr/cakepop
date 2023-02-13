@@ -24,4 +24,4 @@ const buttonTemplate: StoryFn<typeof Button> = (args) => {
 };
 
 export const button = buttonTemplate.bind({});
-//button.parameters = { controls: { exclude: excludedParams, sort: 'alpha' } };
+button.parameters = { controls: { exclude: excludedParams, sort: 'alpha' } };

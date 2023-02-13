@@ -1,14 +1,7 @@
-import React, {
-  forwardRef,
-  ComponentPropsWithRef,
-  useState,
-  PropsWithoutRef,
-  RefAttributes,
-  ReactNode,
-} from 'react';
+import React, { forwardRef, ComponentPropsWithRef, ReactNode } from 'react';
 import { useButton, useHover, useFocusRing, AriaButtonProps } from 'react-aria';
 import { cardRecipe } from './cardRecipe.css';
-import { mergeProps, useObjectRef } from '@react-aria/utils';
+import { useObjectRef } from '@react-aria/utils';
 import { pop, popTypes } from '../../contract/pop.css';
 import { clsx } from 'clsx';
 

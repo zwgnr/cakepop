@@ -3,8 +3,6 @@
  */
 
  import {forwardRef as baseForwardRef} from "react";
-
- //import {CSS} from "../theme/stitches.config";
  
  export type As<Props = any> = React.ElementType<Props>;
  

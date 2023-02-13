@@ -6,7 +6,7 @@ import { space } from '../../contract/tokens';
 export const cbRootRecipe = recipe({
   base: {
     all: 'unset',
-    backgroundColor: 'gray',
+    backgroundColor: 'lightgray',
     borderRadius: 4,
     display: 'flex',
     alignItems: 'center',
@@ -39,10 +39,52 @@ export const cbIndicatorRecipe = recipe({
   },
   variants: {
     variant: {
+      neutral: {
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: vars.color.neutral,
+          },
+        },
+      },
       primary: {
         selectors: {
           '&[data-state="checked"]': {
-            backgroundColor: 'red',
+            backgroundColor: vars.color.primary,
+          },
+        },
+      },
+      accent: {
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: vars.color.accent,
+          },
+        },
+      },
+      success: {
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: vars.color.success,
+          },
+        },
+      },
+      info: {
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: vars.color.info,
+          },
+        },
+      },
+      warning: {
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: vars.color.warning,
+          },
+        },
+      },
+      danger: {
+        selectors: {
+          '&[data-state="checked"]': {
+            backgroundColor: vars.color.danger,
           },
         },
       },

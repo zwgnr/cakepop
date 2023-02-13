@@ -1,17 +1,20 @@
-import * as React from 'react';
-import { ElementType, ComponentPropsWithoutRef, forwardRef, ComponentPropsWithRef } from 'react';
-//import { sprinkles, SprinklesTypes } from '../../contract/sprinkles.css';
+import { forwardRef, ComponentPropsWithRef } from 'react';
+import { pop, popTypes } from '../../contract/pop.css';
+('../../contract/sprinkles.css');
 import { flexRecipe } from './flexRecipe.css';
-//import { RealrainbowSprinkles, rbSprinklesTypes } from '../../contract'
+import { clsx } from 'clsx';
+
 type Ref = HTMLDivElement;
 
-export type FlexProps = ComponentPropsWithRef<'div'>;
+export type FlexVarProps = { sx?: popTypes };
+
+export type FlexProps = ComponentPropsWithRef<'div'> & FlexVarProps;
 
 export const Flex = forwardRef<Ref, FlexProps>((props, ref) => {
-  const { children } = props;
-
+  const { children, sx = {} } = props;
+  let { className, style } = pop(sx!);
   return (
-    <div ref={ref} className={` ${flexRecipe}`} {...props}>
+    <div ref={ref} style={style} className={clsx(!!sx && className, flexRecipe)} {...props}>
       {children}
     </div>
   );

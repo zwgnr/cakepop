@@ -12,7 +12,6 @@ export default {
 
 export const input: StoryFn<typeof Input> = (args) => {
   const [stringValue, setStringValue] = useState('');
-  console.log(stringValue);
   return (
     <div className={defaultTheme}>
       <Input

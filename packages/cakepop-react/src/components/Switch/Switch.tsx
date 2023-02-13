@@ -1,25 +1,23 @@
-import React, { ComponentPropsWithRef } from 'react';
 import * as RadixSwitch from '@radix-ui/react-switch';
-import { ReactNode } from 'react';
 import { SwitchProps as RadixSwitchProps } from '@radix-ui/react-switch';
-import { vars } from '../../contract/contract.css';
-import { space } from '../../contract/tokens';
 import {
   radixRecipeSwitchLabel,
   radixRecipeSwitchRoot,
   radixRecipeSwitchThumb,
-  rootPRops
+  rootPRops,
 } from './switchRecipe.css';
+import { pop, popTypes } from '../../contract/pop.css';
+import { clsx } from 'clsx';
 
+export type BaseSwitchProps = {
+  sx?: popTypes;
+};
 
-export interface BaseSwitchProps {
-  css?: string;
-}
-
-export type SwitchProps = RadixSwitchProps & rootPRops
+export type SwitchProps = RadixSwitchProps & rootPRops & BaseSwitchProps;
 
 export const Switch = (props: SwitchProps) => {
-  const { size, square, children } = props;
+  const { sx = {}, size, square, children, variant } = props;
+  let { className, style } = pop(sx!);
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <label className={radixRecipeSwitchLabel()} style={{ paddingRight: 10 }}>
@@ -27,10 +25,8 @@ export const Switch = (props: SwitchProps) => {
       </label>
       <RadixSwitch.Root
         {...props}
-        //variant={variant}
-        className={radixRecipeSwitchRoot()}
-        //{...focusProps}
-      >
+        style={style}
+        className={clsx(!!sx && className, radixRecipeSwitchRoot({ variant }))}>
         <RadixSwitch.Thumb className={radixRecipeSwitchThumb({ size, square })} />
       </RadixSwitch.Root>
     </div>
