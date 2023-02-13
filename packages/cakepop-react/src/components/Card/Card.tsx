@@ -9,8 +9,8 @@ import React, {
 import { useButton, useHover, useFocusRing, AriaButtonProps } from 'react-aria';
 import { cardRecipe } from './cardRecipe.css';
 import { mergeProps, useObjectRef } from '@react-aria/utils';
-//import { sprinkles, SprinklesTypes } from '../../contract/sprinkles.css';
-//import { RealrainbowSprinkles, rbSprinklesTypes } from '../../contract';
+import { pop, popTypes } from '../../contract/pop.css';
+import { clsx } from 'clsx';
 
 type Ref = HTMLDivElement;
 
@@ -21,14 +21,14 @@ export interface CardProps extends ComponentPropsWithRef<'div'> {
   elevation?: 'low' | 'med' | 'high';
   buttonCard?: boolean;
   hoverable?: boolean;
-  fuckyou?: string;
+  sx?: popTypes;
 }
 
 export type P = CardProps & AriaButtonProps;
 
 export const Card = forwardRef<Ref, P>((props, forwardedRef) => {
-  let { children, buttonCard, hoverable, variant, rounded, elevation, fuckyou } = props;
-  //
+  const { children, buttonCard, hoverable, variant, rounded, elevation, sx = {} } = props;
+  let { className, style } = pop(sx!);
   let ref = useObjectRef(forwardedRef);
   let { isFocusVisible, focusProps } = useFocusRing();
   let { hoverProps, isHovered } = useHover({});
@@ -39,22 +39,26 @@ export const Card = forwardRef<Ref, P>((props, forwardedRef) => {
     },
     ref
   );
+
   return (
     <div
       ref={ref}
       {...(buttonCard ? { ...buttonProps } && { ...focusProps } : '')}
       {...(hoverable ? { ...hoverProps } : '')}
-      className={`${cardRecipe({
-        hoverable,
-        isHovered,
-        elevation,
-        variant,
-        rounded,
-        isFocusVisible,
-      })}`}
+      className={clsx(
+        !!sx && className,
+        cardRecipe({
+          hoverable,
+          isHovered,
+          elevation,
+          variant,
+          rounded,
+          isFocusVisible,
+        })
+      )}
+      style={style}
       tabIndex={buttonCard ? 0 : -1}
-      role={buttonCard ? 'button' : 'div'}
-    >
+      role={buttonCard ? 'button' : 'div'}>
       {children}
     </div>
   );

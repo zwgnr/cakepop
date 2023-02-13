@@ -6,7 +6,7 @@ import { bwLow, bwMed, bwHigh } from '../../utils/getShadowElevation';
 
 
 export const cardRecipe = recipe({
-  base: { backgroundColor: 'red' },
+  base: {},
   variants: {
     variant: {
       outline: { border: '2px solid lightgray' },
