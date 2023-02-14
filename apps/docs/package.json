@@ -1,11 +1,13 @@
 {
   "name": "@cakepop/docs",
   "description": "CakepopUI Docs",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "clean": "rm -rf .next && rm -rf .turbo && rm -rf node_modules"
   },
   "repository": {
     "type": "git",
