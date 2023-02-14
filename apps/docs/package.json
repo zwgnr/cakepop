@@ -1,6 +1,4 @@
 {
-  "name": "@cakepop/docs",
-  "description": "CakepopUI Docs",
   "private":"true",
   "scripts": {
     "dev": "next dev",
