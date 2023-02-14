@@ -62,6 +62,7 @@ export const Button: ButtonComponent = forwardRef(
         className={clsx(
           !!sx && className,
           buttonRecipe({
+            disabled,
             variant,
             size,
             shape,
