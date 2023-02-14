@@ -16,7 +16,7 @@ export default {
 const buttonTemplate: StoryFn<typeof Button> = (args) => {
   return (
     <div style={{ display: 'flex' }} className={defaultTheme}>
-      <Button variant='accent'>
+      <Button disabled variant='accent'>
         button
       </Button>
     </div>

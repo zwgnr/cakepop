@@ -100,7 +100,6 @@ export const buttonRecipe = recipe({
       none: {},
       bw: {},
       match: {},
-      rgb: {},
     },
     elevation: {
       low: {},
