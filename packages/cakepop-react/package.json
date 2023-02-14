@@ -1,6 +1,14 @@
 {
   "name": "@cakepop/react",
   "version": "0.0.1",
+  "author": "Zach Wagner",
+  "keywords": [
+    "UI",
+    "vanilla-extract",
+    "design-system",
+    "component-library",
+    "react"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/types/index.d.ts",
