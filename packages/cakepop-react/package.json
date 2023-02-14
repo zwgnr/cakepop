@@ -57,7 +57,7 @@
     "@rollup/plugin-json": "^5.0.2",
     "esbuild": "^0.15.16",
     "eslint": "^8.15.0",
-    "eslint-config-cakepop": "*",
+    "@cakepop/eslint-config": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.5.1",
