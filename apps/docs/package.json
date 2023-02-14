@@ -1,4 +1,7 @@
 {
+  "name": "@cakepop/docs",
+  "description": "CakepopUI Docs",
+  "version": "0.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
