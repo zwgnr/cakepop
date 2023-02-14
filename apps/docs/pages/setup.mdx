@@ -1,0 +1,19 @@
+# Setup
+
+In order to get going with CakePopUI, first we need to setup a few small things!
+
+Inside the Root file of your applictation import the following stylesheet. This allows the theme variables and configurations to be applied throughout your entire app. This only needs to be imported once if done at Root level.
+
+```tsx filename="myCoolProject.tsx" copy
+import '@cakepop/react/styles';
+```
+
+Then, in the same file (at root level), add the following class to a wrapper around your entire app.
+
+```tsx filename="myCoolProject.tsx" {3} copy
+import '@cakepop/react/styles';
+
+<div className={defaultTheme}>
+  <App />
+</div>
+```

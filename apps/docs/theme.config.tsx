@@ -4,12 +4,12 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
   logo: <span>CakepopUI</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/zwagnr/cakepop',
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  //chat: {
+  //  link: 'https://discord.com',
+ // },
+  docsRepositoryBase: 'https://github.com/zwagnr/cakepop',
   footer: {
     text: 'CakepopUI',
   },
