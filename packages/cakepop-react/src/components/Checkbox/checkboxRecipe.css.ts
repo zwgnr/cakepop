@@ -11,7 +11,6 @@ export const cbRootRecipe = recipe({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    //boxShadow: `0 2px 10px red}`,
     ':focus-visible': { outline: '2px solid blue' },
   },
   variants: {
