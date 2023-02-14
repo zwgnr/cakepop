@@ -5,8 +5,6 @@ import { StoryFn, Meta } from '@storybook/react';
 import { defaultTheme } from '../../themes/defaultTheme.css';
 import { excludedParams } from '../../utils/excludedParams';
 import { Button } from './Button';
-import { Spacer } from '../Spacer/Spacer';
-import { clsx } from 'clsx';
 
 export default {
   title: 'Button',
