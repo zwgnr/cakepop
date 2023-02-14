@@ -1,5 +1,6 @@
 {
   "name": "cakepop-ui",
+  "private": true,
   "workspaces": [
     "packages/*",
     "apps/*"
