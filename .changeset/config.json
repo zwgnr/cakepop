@@ -6,5 +6,5 @@
   "linked": [],
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["@cakepop/tsconfig", "@cakepop/eslint-config", "@cakepop/storybook", "@cakepop/docs"]
+  "ignore": ["@cakepop/storybook", "cakepop-ui-docs"]
 }
