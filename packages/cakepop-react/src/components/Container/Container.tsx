@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef, forwardRef } from 'react';
+import React, { ComponentPropsWithRef, forwardRef } from 'react';
 import { containerRecipe, ContainerVariants } from './containerRecipe.css';
 import { pop, popTypes } from '../../contract/pop.css';
 import { clsx } from 'clsx';
