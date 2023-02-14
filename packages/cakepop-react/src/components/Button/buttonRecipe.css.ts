@@ -586,7 +586,7 @@ export const buttonRecipe = recipe({
     },
   ],
   defaultVariants: {
-    //variant: 'neutral',
+    variant: 'neutral',
     size: 'md',
     shape: 'base',
     shadow: 'none',
