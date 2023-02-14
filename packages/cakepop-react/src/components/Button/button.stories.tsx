@@ -5,6 +5,7 @@ import { StoryFn, Meta } from '@storybook/react';
 import { defaultTheme } from '../../themes/defaultTheme.css';
 import { excludedParams } from '../../utils/excludedParams';
 import { Button } from './Button';
+import { Flex } from '../Flex';
 
 export default {
   title: 'Button',
@@ -14,7 +15,7 @@ export default {
 const buttonTemplate: StoryFn<typeof Button> = (args) => {
   return (
     <div style={{ display: 'flex' }} className={defaultTheme}>
-      <Button disabled variant='accent'>
+      <Button >
         button
       </Button>
     </div>

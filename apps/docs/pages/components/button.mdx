@@ -1,6 +1,6 @@
 import { Tab, Tabs } from 'nextra-theme-docs';
 import '@cakepop/react/styles';
-import { defaultTheme, Button } from '@cakepop/react';
+import { defaultTheme, Button, Flex } from '@cakepop/react';
 
 # Button
 
@@ -9,6 +9,7 @@ import { defaultTheme, Button } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
+      <Flex sx={{gap:'$2'}}>
       <Button as='button' variant='neutral'>Neutral</Button>
       <Button as='button' variant='primary'>Primary</Button>
       <Button as='button' variant='accent'>Accent</Button>
@@ -16,6 +17,7 @@ import { defaultTheme, Button } from '@cakepop/react';
       <Button as='button' variant='info'>Info</Button>
       <Button as='button' variant='warning'>Warning</Button>
       <Button as='button' variant='danger'>Danger</Button>
+      </Flex>
     </div>
   </Tab>
   <Tab>
@@ -39,11 +41,13 @@ import { defaultTheme, Button } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
+      <Flex sx={{gap:'$2'}}>
       <Button as='button' size='xs' variant='primary'>XS</Button>
       <Button as='button' size='sm' variant='primary'>SM</Button>
       <Button as='button' size='md' variant='primary'>MD</Button>
       <Button as='button' size='lg' variant='primary'>LG</Button>
       <Button as='button' size='xl' variant='primary'>XL</Button>
+      </Flex>
     </div>
   </Tab>
   <Tab>
@@ -65,10 +69,12 @@ import { defaultTheme, Button } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
+      <Flex sx={{gap:'$2'}}>
       <Button as='button' variant='primary'>Base</Button>
       <Button as='button' shape='pill' variant='primary'>Pill</Button>
       <Button as='button' shape='square' variant='primary'>Square</Button>
       <Button as='button' shape='circle' variant='primary'>Circle</Button>
+      </Flex>
     </div>
   </Tab>
   <Tab>
@@ -88,9 +94,11 @@ import { defaultTheme, Button } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
+      <Flex sx={{gap:'$2'}}>
       <Button as='button' variant='primary'>None</Button>
       <Button as='button' shadow='bw' elevation='high' variant='primary'>BW</Button>
       <Button as='button' shadow='match' elevation='high' variant='primary'>Match</Button>
+      </Flex>
     </div>
   </Tab>
   <Tab>
@@ -109,9 +117,11 @@ import { defaultTheme, Button } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
+      <Flex sx={{gap:'$2'}}>
       <Button as='button' shadow='bw' elevation='low' variant='primary'>Low</Button>
       <Button as='button' shadow='bw' elevation='med' variant='primary'>Med</Button>
       <Button as='button' shadow='bw' elevation='high' variant='primary'>High</Button>
+      </Flex>
     </div>
   </Tab>
   <Tab>
@@ -142,18 +152,61 @@ import { defaultTheme, Button } from '@cakepop/react';
   </Tab>
 </Tabs>
 
-#### Disabled
+#### Naked
 
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-      <Button variant='primary'>Ghost</Button>
+      <Button naked variant='primary'>Naked</Button>
     </div>
   </Tab>
   <Tab>
     ```tsx //
     import { Button } from '@cakepop/react';
-      <Button disabled variant='primary'>Disabled</Button>
+      <Button naked variant='primary'>Naked</Button>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Disabled
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+      <Button disabled variant='primary'>
+        Ghost
+      </Button>
+    </div>
+  </Tab>
+  <Tab>
+    ```tsx // import {Button} from '@cakepop/react';
+    <Button disabled variant='primary'>
+      Disabled
+    </Button>
+    ```
+  </Tab>
+</Tabs>
+
+#### Polymorphic
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+      <Flex sx={{gap:'$2'}}>
+      <Button as='Button' variant='primary'>Button</Button>
+      <Button as='a' variant='primary'>Link</Button>
+      <Button variant='primary'>Span</Button>
+      <Button as='div' variant='primary'>Div</Button>
+      </Flex>
+    </div>
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+      <Button as='Button' variant='primary'>Button</Button>
+      <Button as='a' variant='primary'>Link</Button>
+      <Button variant='primary'>Span</Button>
     ```
 
   </Tab>
