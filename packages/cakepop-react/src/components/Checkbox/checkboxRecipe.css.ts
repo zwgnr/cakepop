@@ -1,7 +1,5 @@
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
-import { style } from '@vanilla-extract/css';
 import { vars } from '../../contract/contract.css';
-import { space } from '../../contract/tokens';
 
 export const cbRootRecipe = recipe({
   base: {

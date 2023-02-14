@@ -11,14 +11,8 @@ import {
   errorStyles,
 } from './inputRecipe.css';
 
-import {
-  useTextField,
-  AriaTextFieldOptions,
-  useHover,
-  useFocus,
-  AriaTextFieldProps,
-} from 'react-aria';
-import { mergeProps, useObjectRef } from '@react-aria/utils';
+import { useTextField, AriaTextFieldProps } from 'react-aria';
+import { useObjectRef } from '@react-aria/utils';
 import { pop, popTypes } from '../../contract/pop.css';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { CakepopUIProps, forwardRef } from '../../utils/themeTypes';
