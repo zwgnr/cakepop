@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "turbo run dev --no-cache --parallel --continue",
     "sb": "turbo run dev --scope=./apps/storybook",
+    "docs": "turbo run dev --scope=./apps/docs",
     "cakepop": "turbo run dev --scope=./packages/cakepop-react --no-deps",
     "build": "turbo run build",
     "lint": "turbo run lint",

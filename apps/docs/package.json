@@ -1,5 +1,5 @@
 {
-  "name": "cakepop-ui-docs",
+  "name": "@cakepop/docs",
   "version": "0.0.1",
   "description": "CakepopUI Docs",
   "scripts": {
