@@ -9,26 +9,26 @@ import { defaultTheme, Button } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-      <Button variant='neutral'>Neutral</Button>
-      <Button variant='primary'>Primary</Button>
-      <Button variant='accent'>Accent</Button>
-      <Button variant='success'>Success</Button>
-      <Button variant='info'>Info</Button>
-      <Button variant='warning'>Warning</Button>
-      <Button variant='danger'>Danger</Button>
+      <Button as='button' variant='neutral'>Neutral</Button>
+      <Button as='button' variant='primary'>Primary</Button>
+      <Button as='button' variant='accent'>Accent</Button>
+      <Button as='button' variant='success'>Success</Button>
+      <Button as='button' variant='info'>Info</Button>
+      <Button as='button' variant='warning'>Warning</Button>
+      <Button as='button' variant='danger'>Danger</Button>
     </div>
   </Tab>
   <Tab>
     ```tsx //
     import { Button } from '@cakepop/react';
 
-     <Button variant='neutral'>Neutral</Button>
-     <Button variant='primary'>Primary</Button>
-     <Button variant='accent'>Accent</Button>
-     <Button variant='success'>Success</Button>
-     <Button variant='info'>Info</Button>
-     <Button variant='warning'>Warning</Button>
-     <Button variant='danger'>Danger</Button>
+     <Button as='button' variant='neutral'>Neutral</Button>
+     <Button as='button' variant='primary'>Primary</Button>
+     <Button as='button' variant='accent'>Accent</Button>
+     <Button as='button' variant='success'>Success</Button>
+     <Button as='button' variant='info'>Info</Button>
+     <Button as='button' variant='warning'>Warning</Button>
+     <Button as='button' variant='danger'>Danger</Button>
     ```
 
   </Tab>
@@ -39,22 +39,121 @@ import { defaultTheme, Button } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-      <Button size='xs' variant='primary'>XS</Button>
-      <Button size='sm' variant='primary'>SM</Button>
-      <Button size='md' variant='primary'>MD</Button>
-      <Button size='lg' variant='primary'>LG</Button>
-      <Button size='xl' variant='primary'>XL</Button>
+      <Button as='button' size='xs' variant='primary'>XS</Button>
+      <Button as='button' size='sm' variant='primary'>SM</Button>
+      <Button as='button' size='md' variant='primary'>MD</Button>
+      <Button as='button' size='lg' variant='primary'>LG</Button>
+      <Button as='button' size='xl' variant='primary'>XL</Button>
     </div>
   </Tab>
   <Tab>
     ```tsx //
     import { Button } from '@cakepop/react';
 
-      <Button size='xs' variant='primary'>XS</Button>
-      <Button size='sm' variant='primary'>SM</Button>
-      <Button size='md' variant='primary'>MD</Button>
-      <Button size='lg' variant='primary'>LG</Button>
-      <Button size='xl' variant='primary'>XL</Button>
+      <Button as='button' size='xs' variant='primary'>XS</Button>
+      <Button as='button' size='sm' variant='primary'>SM</Button>
+      <Button as='button' size='md' variant='primary'>MD</Button>
+      <Button as='button' size='lg' variant='primary'>LG</Button>
+      <Button as='button' size='xl' variant='primary'>XL</Button>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Shape
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+      <Button as='button' variant='primary'>Base</Button>
+      <Button as='button' shape='pill' variant='primary'>Pill</Button>
+      <Button as='button' shape='square' variant='primary'>Square</Button>
+      <Button as='button' shape='circle' variant='primary'>Circle</Button>
+    </div>
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+      <Button as='button' variant='primary'>Base</Button>
+      <Button as='button' shape='pill' variant='primary'>Pill</Button>
+      <Button as='button' shape='square' variant='primary'>Square</Button>
+      <Button as='button' shape='circle' variant='primary'>Circle</Button>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Shadow
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+      <Button as='button' variant='primary'>None</Button>
+      <Button as='button' shadow='bw' elevation='high' variant='primary'>BW</Button>
+      <Button as='button' shadow='match' elevation='high' variant='primary'>Match</Button>
+    </div>
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+      <Button as='button' variant='primary'>None</Button>
+      <Button as='button' shadow='bw' elevation='high' variant='primary'>BW</Button>
+      <Button as='button' shadow='match' elevation='high' variant='primary'>Match</Button>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Shadow Elevation
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+      <Button as='button' shadow='bw' elevation='low' variant='primary'>Low</Button>
+      <Button as='button' shadow='bw' elevation='med' variant='primary'>Med</Button>
+      <Button as='button' shadow='bw' elevation='high' variant='primary'>High</Button>
+    </div>
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+      <Button as='button' shadow='bw' elevation='low' variant='primary'>Low</Button>
+      <Button as='button' shadow='bw' elevation='med' variant='primary'>Med</Button>
+      <Button as='button' shadow='bw' elevation='high' variant='primary'>High</Button>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Ghost
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+      <Button as='button' ghost variant='primary'>Ghost</Button>
+    </div>
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+      <Button as='button' ghost variant='primary'>Ghost</Button>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Disabled
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+      <Button variant='primary'>Ghost</Button>
+    </div>
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Button } from '@cakepop/react';
+      <Button disabled variant='primary'>Ghost</Button>
     ```
 
   </Tab>
