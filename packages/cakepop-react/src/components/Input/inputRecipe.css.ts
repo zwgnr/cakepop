@@ -1,7 +1,6 @@
 import { vars } from '../../contract/contract.css';
-import { style } from '@macaron-css/core';
-import { recipe, RecipeVariants } from '@macaron-css/core';
-import { space } from '../../contract/tokens';
+import { style } from '@vanilla-extract/css';
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 
 export const boxRecipe = recipe({
   base: {
