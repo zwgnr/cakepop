@@ -1,1 +1,1 @@
-packages/cakepop-react/README.md
+../packages/cakepop-react/README.md
