@@ -9,14 +9,29 @@ import { defaultTheme, Flex, Checkbox } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-  <Checkbox />
+      <Flex>
+        <Checkbox size='md' defaultChecked variant='neutral'/>
+        <Checkbox size='md' defaultChecked variant='primary'/>
+        <Checkbox size='md' defaultChecked variant='accent'/>
+        <Checkbox size='md' defaultChecked variant='success'/>
+        <Checkbox size='md' defaultChecked variant='info'/>
+        <Checkbox size='md' defaultChecked variant='warning'/>
+        <Checkbox size='md' defaultChecked variant='danger'/>
+      </Flex>
     </div>
 
   </Tab>
   <Tab>
     ```tsx //
-    import { Button } from '@cakepop/react';
+    import { Checkbox } from '@cakepop/react';
 
+        <Checkbox size='md' defaultChecked variant='neutral'/>
+        <Checkbox size='md' defaultChecked variant='primary'/>
+        <Checkbox size='md' defaultChecked variant='accent'/>
+        <Checkbox size='md' defaultChecked variant='success'/>
+        <Checkbox size='md' defaultChecked variant='info'/>
+        <Checkbox size='md' defaultChecked variant='warning'/>
+        <Checkbox size='md' defaultChecked variant='danger'/>
     ```
 
   </Tab>
@@ -27,14 +42,44 @@ import { defaultTheme, Flex, Checkbox } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-
+      <Flex>
+        <Checkbox size='xs' variant='primary'/>
+        <Checkbox size='sm' variant='primary'/>
+        <Checkbox size='md' variant='primary'/>
+        <Checkbox size='lg' variant='primary'/>
+        <Checkbox size='xl' variant='primary'/>
+      </Flex>
     </div>
 
   </Tab>
   <Tab>
     ```tsx //
-    import { Button } from '@cakepop/react';
+    import { Checkbox } from '@cakepop/react';
 
+      <Checkbox size='xs' variant='primary'/>
+      <Checkbox size='sm' variant='primary'/>
+      <Checkbox size='md' variant='primary'/>
+      <Checkbox size='lg' variant='primary'/>
+      <Checkbox size='xl' variant='primary' />
+    ```
+
+  </Tab>
+</Tabs>
+
+#### With Label
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+        <Checkbox size='md' variant='primary'>Label</Checkbox>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Checkbox } from '@cakepop/react';
+
+      <Checkbox size='md' variant='primary'>Label</Checkbox>
     ```
 
   </Tab>
