@@ -28,13 +28,32 @@ export type CBProps = Props &
   CheckboxProps;
 
 export const Checkbox = forwardRef<Ref, CBProps>((props, forwardedRef) => {
-  const { sx = {}, children, variant, size } = props;
+  const {
+    sx = {},
+    children,
+    variant,
+    size,
+    defaultChecked,
+    checked,
+    onCheckedChange,
+    disabled,
+    required,
+    name,
+    value,
+  } = props;
   let { className, style } = pop(sx!);
   let ref = useObjectRef(forwardedRef);
   return (
     <form>
       <Flex style={{ alignItems: 'center' }}>
         <RadixCheckbox.Root
+          defaultChecked={defaultChecked}
+          checked={checked}
+          onCheckedChange={onCheckedChange}
+          disabled={disabled}
+          required={required}
+          name={name}
+          value={value}
           style={style}
           className={clsx(!!sx && className, cbRootRecipe({ size }))}
           id='c1'>
