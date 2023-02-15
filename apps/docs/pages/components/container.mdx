@@ -1,44 +1,80 @@
 import { Tab, Tabs } from 'nextra-theme-docs';
 import '@cakepop/react/styles';
-import { defaultTheme, Container } from '@cakepop/react';
+import { defaultTheme, Container, Flex } from '@cakepop/react';
 
 # Container
 
-#### Variant
+ Resize the screen to see how this works!
+
+#### Mode
 
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-  <Container sx={{bg:'red'}}>
-    <h1>Center</h1>
+  <Container mode='fluid' maxSize='lg'>
+    <h1>Fluid</h1>
+  </Container>
+  <Container mode='responsive' maxSize='lg'>
+    <h1>Responsive</h1>
   </Container>
     </div>
 
   </Tab>
   <Tab>
     ```tsx //
-    import { Button } from '@cakepop/react';
-  <Flex sx={{place:'center', bg:'blue'}}>
-    <h1>Center</h1>
-</Flex>
+    import { Container } from '@cakepop/react';
+  <Container mode='fluid' maxSize='lg'>
+    <h1>Fluid</h1>
+  </Container>
+  <Container mode='responsive' maxSize='lg'>
+    <h1>Responsive</h1>
+  </Container>
     ```
 
   </Tab>
 </Tabs>
 
-#### Size
+#### MaxSize
 
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-
+      <Container mode='fluid' maxSize='xs'>
+        <h1>xs</h1>
+      </Container>
+      <Container mode='fluid' maxSize='sm'>
+        <h1>sm</h1>
+      </Container>
+      <Container mode='fluid' maxSize='md'>
+        <h1>md</h1>
+      </Container>
+       <Container mode='fluid' maxSize='lg'>
+        <h1>lg</h1>
+      </Container>
+       <Container mode='fluid' maxSize='xl'>
+        <h1>xl</h1>
+      </Container>
     </div>
 
   </Tab>
   <Tab>
     ```tsx //
-    import { Button } from '@cakepop/react';
-
+    import { Container } from '@cakepop/react';
+       <Container mode='fluid' maxSize='xs'>
+        <h1>xs</h1>
+      </Container>
+      <Container mode='fluid' maxSize='sm'>
+        <h1>sm</h1>
+      </Container>
+      <Container mode='fluid' maxSize='md'>
+        <h1>md</h1>
+      </Container>
+       <Container mode='fluid' maxSize='lg'>
+        <h1>lg</h1>
+      </Container>
+       <Container mode='fluid' maxSize='xl'>
+        <h1>xl</h1>
+      </Container>
     ```
 
   </Tab>
