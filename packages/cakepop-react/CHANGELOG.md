@@ -1,5 +1,11 @@
 # @cakepop/react
 
+## 0.2.2
+
+### Patch Changes
+
+- 6f4f913: add missing switch props
+
 ## 0.2.1
 
 ### Patch Changes
