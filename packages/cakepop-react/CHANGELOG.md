@@ -1,5 +1,11 @@
 # @cakepop/react
 
+## 0.2.1
+
+### Patch Changes
+
+- 1a37254: fix container variants
+
 ## 0.2.0
 
 ### Minor Changes
