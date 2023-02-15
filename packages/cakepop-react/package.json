@@ -25,6 +25,11 @@
   "files": [
     "dist/**"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zwagnr/cakepop",
+    "directory": "packages/react"
+  },
   "license": "MIT",
   "scripts": {
     "build": "vite build",
