@@ -1,8 +1,9 @@
 import React, { forwardRef, ComponentPropsWithRef } from 'react';
+import { clsx } from 'clsx';
 import { pop, popTypes } from '../../contract/pop.css';
 ('../../contract/sprinkles.css');
 import { flexRecipe } from './flexRecipe.css';
-import { clsx } from 'clsx';
+
 
 type Ref = HTMLDivElement;
 

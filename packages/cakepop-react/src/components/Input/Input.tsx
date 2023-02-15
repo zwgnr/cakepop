@@ -1,5 +1,10 @@
 import * as React from 'react';
 import { ComponentPropsWithRef, useState } from 'react';
+import { useTextField, AriaTextFieldProps } from 'react-aria';
+import { useObjectRef } from '@react-aria/utils';
+import { clsx } from 'clsx';
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
+
 import {
   boxRecipe,
   inputRecipe,
@@ -11,12 +16,8 @@ import {
   errorStyles,
 } from './inputRecipe.css';
 
-import { useTextField, AriaTextFieldProps } from 'react-aria';
-import { useObjectRef } from '@react-aria/utils';
 import { pop, popTypes } from '../../contract/pop.css';
-import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { CakepopUIProps, forwardRef } from '../../utils/themeTypes';
-import { clsx } from 'clsx';
 
 export type CPWR = ComponentPropsWithRef<'input'>;
 

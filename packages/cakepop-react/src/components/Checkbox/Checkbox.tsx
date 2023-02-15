@@ -1,19 +1,21 @@
 import React, { forwardRef } from 'react';
 import { useObjectRef } from '@react-aria/utils';
+import { clsx } from 'clsx';
+import * as RadixCheckbox from '@radix-ui/react-checkbox';
+import { CheckboxIndicatorProps, CheckboxProps } from '@radix-ui/react-checkbox';
+import { CheckIcon } from '@radix-ui/react-icons';
+
 import {
   cbRootRecipe,
   cbIndicatorRecipe,
   checkboxRootVariants,
   checkboxIndicatorVariants,
 } from './checkboxRecipe.css';
-import * as RadixCheckbox from '@radix-ui/react-checkbox';
-import { CheckboxIndicatorProps, CheckboxProps } from '@radix-ui/react-checkbox';
 
-import { CheckIcon } from '@radix-ui/react-icons';
-export type Ref = HTMLLabelElement & HTMLInputElement;
 import { Flex } from '../Flex/Flex';
 import { pop, popTypes } from '../../contract/pop.css';
-import { clsx } from 'clsx';
+
+export type Ref = HTMLLabelElement & HTMLInputElement;
 
 export interface Props {
   sx?: popTypes;

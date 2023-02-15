@@ -1,7 +1,7 @@
 import React, { ComponentPropsWithRef, forwardRef } from 'react';
+import { clsx } from 'clsx';
 import { containerRecipe, ContainerVariants } from './containerRecipe.css';
 import { pop, popTypes } from '../../contract/pop.css';
-import { clsx } from 'clsx';
 
 export type ContainerVarProps = {
   sx?: popTypes;

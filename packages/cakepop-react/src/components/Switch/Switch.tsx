@@ -1,8 +1,8 @@
 import React from 'react';
 import { clsx } from 'clsx';
 import * as RadixSwitch from '@radix-ui/react-switch';
-
 import { SwitchProps as RadixSwitchProps } from '@radix-ui/react-switch';
+
 import {
   radixRecipeSwitchLabel,
   radixRecipeSwitchRoot,
@@ -11,7 +11,6 @@ import {
 } from './switchRecipe.css';
 
 import { pop, popTypes } from '../../contract/pop.css';
-
 
 export type BaseSwitchProps = {
   sx?: popTypes;
