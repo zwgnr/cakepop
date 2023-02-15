@@ -11,10 +11,11 @@ import { defaultTheme, Container, Flex } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-  <Container mode='fluid' maxSize='lg'>
+  <Container mode='fluid' maxSize='lg' sx={{bg:'gray'}}>
     <h1>Fluid</h1>
   </Container>
-  <Container mode='responsive' maxSize='lg'>
+  <Flex sx={{height:'$2'}}/>
+  <Container mode='responsive' maxSize='lg' sx={{bg:'gray'}}>
     <h1>Responsive</h1>
   </Container>
     </div>
@@ -39,19 +40,23 @@ import { defaultTheme, Container, Flex } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-      <Container mode='fluid' maxSize='xs'>
+      <Container mode='fluid' maxSize='xs' sx={{bg:'gray'}}>
         <h1>xs</h1>
       </Container>
-      <Container mode='fluid' maxSize='sm'>
+      <Flex sx={{height:'$2'}}/>
+      <Container mode='fluid' maxSize='sm' sx={{bg:'gray'}}>
         <h1>sm</h1>
       </Container>
-      <Container mode='fluid' maxSize='md'>
+      <Flex sx={{height:'$2'}}/>
+      <Container mode='fluid' maxSize='md' sx={{bg:'gray'}}>
         <h1>md</h1>
       </Container>
-       <Container mode='fluid' maxSize='lg'>
+      <Flex sx={{height:'$2'}}/>
+       <Container mode='fluid' maxSize='lg' sx={{bg:'gray'}}>
         <h1>lg</h1>
       </Container>
-       <Container mode='fluid' maxSize='xl'>
+      <Flex sx={{height:'$2'}}/>
+       <Container mode='fluid' maxSize='xl' sx={{bg:'gray'}}>
         <h1>xl</h1>
       </Container>
     </div>
@@ -60,19 +65,19 @@ import { defaultTheme, Container, Flex } from '@cakepop/react';
   <Tab>
     ```tsx //
     import { Container } from '@cakepop/react';
-       <Container mode='fluid' maxSize='xs'>
+       <Container mode='fluid' maxSize='xs' sx={{bg:'gray'}}>
         <h1>xs</h1>
       </Container>
-      <Container mode='fluid' maxSize='sm'>
+      <Container mode='fluid' maxSize='sm' sx={{bg:'gray'}}>
         <h1>sm</h1>
       </Container>
-      <Container mode='fluid' maxSize='md'>
+      <Container mode='fluid' maxSize='md' sx={{bg:'gray'}}>
         <h1>md</h1>
       </Container>
-       <Container mode='fluid' maxSize='lg'>
+       <Container mode='fluid' maxSize='lg' sx={{bg:'gray'}}>
         <h1>lg</h1>
       </Container>
-       <Container mode='fluid' maxSize='xl'>
+       <Container mode='fluid' maxSize='xl' sx={{bg:'gray'}} >
         <h1>xl</h1>
       </Container>
     ```
