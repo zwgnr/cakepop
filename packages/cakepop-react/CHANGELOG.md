@@ -1,5 +1,12 @@
 # @cakepop/react
 
+## 0.2.0
+
+### Minor Changes
+
+- c7c5765: Pass radix checkbox props to react component
+- e4b5947: Pass radix switch props to react component
+
 ## 0.1.0
 
 ### Minor Changes
