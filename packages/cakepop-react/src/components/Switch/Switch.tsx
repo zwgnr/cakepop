@@ -19,7 +19,20 @@ export type BaseSwitchProps = {
 export type SwitchProps = RadixSwitchProps & rootPRops & BaseSwitchProps;
 
 export const Switch = (props: SwitchProps) => {
-  const { sx = {}, size, square, children, variant } = props;
+  const {
+    sx = {},
+    size,
+    square,
+    children,
+    variant,
+    defaultChecked,
+    checked,
+    onCheckedChange,
+    disabled,
+    required,
+    name,
+    value,
+  } = props;
   let { className, style } = pop(sx!);
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -27,6 +40,13 @@ export const Switch = (props: SwitchProps) => {
         {children}
       </label>
       <RadixSwitch.Root
+        defaultChecked={defaultChecked}
+        checked={checked}
+        onCheckedChange={onCheckedChange}
+        disabled={disabled}
+        required={required}
+        name={name}
+        value={value}
         {...props}
         style={style}
         className={clsx(!!sx && className, radixRecipeSwitchRoot({ variant }))}>
