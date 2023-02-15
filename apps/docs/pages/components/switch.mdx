@@ -1,6 +1,6 @@
 import { Tab, Tabs } from 'nextra-theme-docs';
 import '@cakepop/react/styles';
-import { defaultTheme, Switch } from '@cakepop/react';
+import { defaultTheme, Switch, Flex } from '@cakepop/react';
 
 # Switch
 
@@ -9,14 +9,29 @@ import { defaultTheme, Switch } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-  <Switch >
-  </Switch>
+      <Flex>
+        <Switch defaultChecked variant='neutral' />
+        <Switch defaultChecked variant='primary' />
+        <Switch defaultChecked variant='accent' />
+        <Switch defaultChecked variant='success' />
+        <Switch defaultChecked variant='info' />
+        <Switch defaultChecked variant='warning' />
+        <Switch defaultChecked variant='danger' />
+      </Flex>
     </div>
 
   </Tab>
   <Tab>
     ```tsx //
+        import { Switch } from '@cakepop/react';
 
+        <Switch defaultChecked variant='neutral' />
+        <Switch defaultChecked variant='primary' />
+        <Switch defaultChecked variant='accent' />
+        <Switch defaultChecked variant='success' />
+        <Switch defaultChecked variant='info' />
+        <Switch defaultChecked variant='warning' />
+        <Switch defaultChecked variant='danger' />
     ```
 
   </Tab>
@@ -27,15 +42,69 @@ import { defaultTheme, Switch } from '@cakepop/react';
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-
+      <Flex>
+        <Switch defaultChecked size='xs' />
+        <Switch defaultChecked size='sm' />
+        <Switch defaultChecked size='md' />
+        <Switch defaultChecked size='lg' />
+        <Switch defaultChecked size='xl' />
+      </Flex>
     </div>
 
   </Tab>
   <Tab>
     ```tsx //
-    import { Button } from '@cakepop/react';
+        import { Switch } from '@cakepop/react';
 
+        <Switch defaultChecked size='xs' />
+        <Switch defaultChecked size='sm' />
+        <Switch defaultChecked size='md' />
+        <Switch defaultChecked size='lg' />
+        <Switch defaultChecked size='xl' />
     ```
 
   </Tab>
 </Tabs>
+
+#### Square
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+      <Flex>
+        <Switch square />
+      </Flex>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+        import { Switch } from '@cakepop/react';
+
+       <Switch>Label</Switch>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Label
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+      <Flex>
+        <Switch>Label</Switch>
+      </Flex>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+        import { Switch } from '@cakepop/react';
+
+       <Switch>Label</Switch>
+    ```
+
+  </Tab>
+</Tabs>
+

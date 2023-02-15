@@ -49,7 +49,7 @@ export const Switch = (props: SwitchProps) => {
         value={value}
         {...props}
         style={style}
-        className={clsx(!!sx && className, radixRecipeSwitchRoot({ variant }))}>
+        className={clsx(!!sx && className, radixRecipeSwitchRoot({ square, size, variant }))}>
         <RadixSwitch.Thumb className={radixRecipeSwitchThumb({ size, square })} />
       </RadixSwitch.Root>
     </div>

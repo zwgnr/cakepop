@@ -1,40 +1,142 @@
 import { Tab, Tabs } from 'nextra-theme-docs';
 import '@cakepop/react/styles';
-import { defaultTheme, Input } from '@cakepop/react';
+import { defaultTheme, Input, Flex } from '@cakepop/react';
 
 # Input
 
-#### Variant
+#### Focus Color
+
+\* Nextra adds their own focus ring that I can not disable at the moment.
 
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-  <Input >
-  </Input>
+      <Flex sx={{gap:'$2'}}>
+        <Input fc='neutral'/>
+        <Input fc='primary'/>
+        <Input fc='accent'/>
+        <Input fc='success'/>
+        <Input fc='info'/>
+        <Input fc='warning'/>
+        <Input fc='danger'/>
+      </Flex>
     </div>
 
   </Tab>
   <Tab>
     ```tsx //
-
+    import { Input } from '@cakepop/react';
+    
+        <Input fc='neutral'/>
+        <Input fc='primary'/>
+        <Input fc='accent'/>
+        <Input fc='success'/>
+        <Input fc='info'/>
+        <Input fc='warning'/>
+        <Input fc='danger'/>
     ```
 
   </Tab>
 </Tabs>
 
-#### Size
+#### Shape
 
 <Tabs items={['Preview', 'TSX']}>
   <Tab>
     <div className={defaultTheme}>
-
+      <Flex sx={{gap:'$2'}}>
+        <Input shape='basic'/>
+        <Input shape='border'/>
+        <Input shape='rounded'/>
+        <Input shape='under'/>
+      </Flex>
     </div>
 
   </Tab>
   <Tab>
     ```tsx //
-    import { Button } from '@cakepop/react';
+    import { Input } from '@cakepop/react';
+    
+        <Input shape='basic'/>
+        <Input shape='border'/>
+        <Input shape='rounded'/>
+        <Input shape='under'/>
+    ```
 
+  </Tab>
+</Tabs>
+
+#### Start Helper
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+        <Input startHelper='www'/>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Input } from '@cakepop/react';
+    
+        <Input startHelper='www'/>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### End Helper
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+        <Input endHelper='.com'/>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Input } from '@cakepop/react';
+    
+        <Input endHelper='.com'/>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Error Message
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+        <Input errorMessage='Please Enter a Valid Email'/>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Input } from '@cakepop/react';
+    
+        <Input errorMessage='Please Enter a Valid Email'/>
+    ```
+
+  </Tab>
+</Tabs>
+
+#### Label
+
+<Tabs items={['Preview', 'TSX']}>
+  <Tab>
+    <div className={defaultTheme}>
+        <Input label='Your Email'/>
+    </div>
+
+  </Tab>
+  <Tab>
+    ```tsx //
+    import { Input } from '@cakepop/react';
+    
+        <Input label='Your Email'/>
     ```
 
   </Tab>
