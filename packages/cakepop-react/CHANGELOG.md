@@ -1,5 +1,14 @@
 # @cakepop/react
 
+## 0.1.0
+
+### Minor Changes
+
+- 02a02f3: bump deps and fix VE usage in Input component
+- d6b7e22: add to readme
+- 8d3629d: add repo info to package.json
+- a19cb74: add readme and bump rainbow-sprinkles version
+
 ## 0.0.2
 
 ### Patch Changes
