@@ -1,16 +1,9 @@
 import { vars } from '../../contract/contract.css';
-import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 
 export const containerRecipe = recipe({
-  base: {},
+  base: { marginLeft: 'auto', marginRight: 'auto' },
   variants: {
-    overrides: {
-      false: {
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        backgroundColor: 'blue',
-      },
-    },
     mode: {
       fluid: {},
       responsive: {},
@@ -22,9 +15,6 @@ export const containerRecipe = recipe({
       lg: {},
       xl: {},
     },
-  },
-  defaultVariants: {
-    overrides: false,
   },
   compoundVariants: [
     {
