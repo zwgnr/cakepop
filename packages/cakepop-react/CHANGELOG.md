@@ -1,5 +1,11 @@
 # @cakepop/react
 
+## 0.2.3
+
+### Patch Changes
+
+- 366d0f8: small default theme changes
+
 ## 0.2.2
 
 ### Patch Changes
