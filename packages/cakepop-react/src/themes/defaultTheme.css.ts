@@ -4,7 +4,7 @@ import { pallete } from '../contract/tokens';
 
 export const defaultTheme = createTheme(vars, {
   color: {
-    background: '0deg 0% 45%',
+    background: 'white',
     text: 'black',
     textContrast: 'white',
     focus: pallete.blue300,
@@ -36,14 +36,6 @@ export const defaultTheme = createTheme(vars, {
     danger: pallete.red500,
     dangerHover: pallete.red600,
     dangerShadow: pallete.red400,
-    //
-    secondary: 'red',
-  },
-  spacing: {
-    small: '4px',
-    medium: '8px',
-    large: '16px',
-    xlarge: '32px',
   },
   fluidContainerSizes: {
     xs: '320px',

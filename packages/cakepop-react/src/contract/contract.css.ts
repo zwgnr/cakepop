@@ -27,13 +27,6 @@ export const vars = createThemeContract({
     danger: null,
     dangerHover: null,
     dangerShadow: null,
-    secondary: null,
-  },
-  spacing: {
-    small: null,
-    medium: null,
-    large: null,
-    xlarge: null,
   },
   fluidContainerSizes: {
     xs: null,
