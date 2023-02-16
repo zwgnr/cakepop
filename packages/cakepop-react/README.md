@@ -14,7 +14,7 @@ npm i @cakepop/react
 
 ## Documentation
 
-<a href=''>Docs!</a>
+https://cakepop-docs.vercel.app/
 
 ## Contributing
 
