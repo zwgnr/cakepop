@@ -1,5 +1,11 @@
 # @cakepop/react
 
+## 0.2.4
+
+### Patch Changes
+
+- f488d4f: add docs link to readme
+
 ## 0.2.3
 
 ### Patch Changes
