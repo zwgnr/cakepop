@@ -12,10 +12,6 @@
   },
   "components": "Components",
   "theme": "Theme",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
   "contact": {
     "title": "Contact ↗",
     "type": "page",

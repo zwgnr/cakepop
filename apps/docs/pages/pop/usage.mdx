@@ -1,0 +1,67 @@
+import { Flex, defaultTheme } from '@cakepop/react';
+
+# Using Pop
+
+Getting started using atomic classes with pop is easy. Pop classes can be set inside of an sx prop. Let's take a simple Flex component and customize it with pop props!
+
+```tsx
+import { Flex } from '@cakepop/react';
+
+<Flex sx={{ bg:'blue', x:'100px', y:'100px', p:'$2' }}>
+    <h1 style={{ color:'white' }}>Hi!</h1>
+</Flex>;
+```
+
+<div className={defaultTheme}>
+    <Flex sx={{ bg:'blue', x:'100px', y:'100px', p:'$2' }}>
+        <h1 style={{ color:'white' }}>Hi!</h1>
+    </Flex>
+</div>
+
+You are able to use <span><a style={{color:'blue', textDecoration: 'underline'}} href='/theme/tokens'>Tokens</a></span>  as properties.
+
+```tsx
+import { Flex } from '@cakepop/react';
+
+<Flex sx={{ bg:'$red500', x:'100px', y:'100px', p:'$2' }}>
+    <h1 style={{color:'white'}}>Hi!</h1>
+</Flex>;
+```
+
+<div className={defaultTheme}>
+    <Flex sx={{bg:'$red500', x:'100px', y:'100px' , p:'$2' }}>
+        <h1 style={{  color:'white'  }}>Hi!</h1>
+    </Flex>
+</div>
+
+Responsive properties are also supported.
+
+```tsx
+import { Flex } from '@cakepop/react';
+
+<Flex sx={{ bg: { base: '$red500', hover: '$green500' }, x: '100px', y: '100px', p:'$2' }}>
+  <h1 style={{ color: 'white' }}>Hi!</h1>
+</Flex>;
+```
+
+<div className={defaultTheme}>
+<Flex sx={{ bg: { base: '$red500', hover: '$green500' }, x: '100px', y: '100px', p:'$2' }}>
+  <h1 style={{ color: 'white' }}>Hi!</h1>
+</Flex>
+</div>
+
+Unlike the orginal Sprinkles API, Rainbow Sprinkles allows you to use arbitrary values in addition to predefined props. 
+For this example we will set the padding to 17px.
+```tsx
+import { Flex } from '@cakepop/react';
+
+<Flex sx={{ bg: { base: '$red500', hover: '$green500' }, x: '100px', y: '100px', p:'17px' }}>
+  <h1 style={{ color: 'white' }}>Hi!</h1>
+</Flex>;
+```
+
+<div className={defaultTheme}>
+<Flex sx={{ bg:'$red500', x: '100px', y: '100px', p:'17px' }}>
+  <h1 style={{ color: 'white' }}>Hi!</h1>
+</Flex>
+</div>

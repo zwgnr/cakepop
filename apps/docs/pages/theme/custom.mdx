@@ -1,0 +1,67 @@
+# Custom Theme
+
+If you would like to use your own theme instead of the default. There are some steps you will need to follow.
+
+First, install and configure Vanilla Extract for your bundler of choice. More info on that can be found here.
+
+https://vanilla-extract.style/documentation/getting-started
+
+Next, create a theme file with the extensions yourTheme.css.ts and configure the follow as show below.
+
+\* Please note that the theme configuration must match the <span><a style={{color:'blue', textDecoration: 'underline'}} href='/theme/contract'>contract</a></span> EXACTLY. All variables must be included, else a type error will be thrown.
+
+```tsx filename="yourTheme.css.ts"
+import { vars } from '@cakepop/react';
+import { createTheme } from '@vanilla-extract/css';
+
+export const yourTheme = createThemeContract({
+  color: {
+    background: 'red',
+    text: 'blue',
+    textContrast: 'pink',
+    focus: 'green',
+    neutral: 'gray',
+    neutralHover: 'lightgray',
+    neutralShadow: 'black',
+    primary: 'blue',
+    primaryHover: 'blue',
+    primaryShadow: 'blue',
+    accent: 'blue',
+    accentHover: 'blue',
+    accentShadow: 'blue',
+    success: 'blue',
+    successHover: 'blue',
+    successShadow: 'blue',
+    info: 'blue',
+    infoHover: 'blue',
+    infoShadow: 'blue',
+    warning: 'blue',
+    warningHover: 'blue',
+    warningShadow: 'blue',
+    danger: 'blue',
+    dangerHover: 'blue',
+    dangerShadow: 'blue',
+  },
+  fluidContainerSizes: {
+    xs: '300px',
+    sm: '400px',
+    md: '500px',
+    lg: '1000px',
+    xl: '1800px',
+  },
+  breakpoints: {
+    xs: '300px',
+    sm: '400px',
+    md: '500px',
+    lg: '1000px',
+    xl: '1800px',
+  },
+  media: {
+    xs: 'only screen and (min-width: 300px) and (max-width: 549px)',
+    sm: 'only screen and (min-width: 550px) and (max-width: 767px)',
+    md: 'only screen and (min-width: 768px) and (max-width: 1023px)',
+    lg: 'only screen and (min-width: 768px) and (max-width: 1023px)',
+    xl: 'only screen and (min-width: 768px) and (max-width: 1023px)',
+  },
+});
+```
