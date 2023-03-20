@@ -8,24 +8,12 @@ const externals = [...Object.keys(peerDependencies)];
 
 export default defineConfig({
   build: {
-    //cssCodeSplit: true,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       fileName: 'index',
       formats: ['cjs', 'es'],
     },
     rollupOptions: {
-      // output: {
-      // Change .css.js files to something else so that they don't get re-processed by consumer's setup
-      //entryFileNames({ name }) {
-      //    return `${name.replace(/\.css$/, '.css.vanilla')}.js`;
-      //   },
-      //entryFileNames: '[name].js',
-      //preserveModules: true,
-      //preserveModulesRoot: 'src',
-      //format: 'esm',
-      // dir: 'dist',
-      //},
       external: externals,
     },
   },
