@@ -1,5 +1,11 @@
 # @cakepop/react
 
+## 0.2.5
+
+### Patch Changes
+
+- 3737a70: clean up vite config
+
 ## 0.2.4
 
 ### Patch Changes
